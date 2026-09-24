@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luis Sosa | Frontend Developer | React Native & React</title>
-  <meta name="description" content="Portafolio de Luis Sosa, Frontend Developer con 3 años de experiencia en React Native y React." />
+  <meta name="description" content="Portafolio de Luis Sosa, Frontend Developer con 3+ años de experiencia en React Native y React." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,6 +14,7 @@
     <div class="nav-content">
       <span class="logo">LS</span>
       <ul>
+        <li><a href="#experiencia">Experiencia</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#formacion">Formación</a></li>
         <li><a href="#contacto">Contacto</a></li>
@@ -26,9 +27,9 @@
       <div class="header-badge">Frontend Developer | React Native & React</div>
       <h1>Luis Alberto <span>Sosa González</span></h1>
       <p class="header-subtitle">
-        +3 años desarrollando aplicaciones móviles y web con React Native y React.
-        Experiencia en Firebase, Redux, automatización de CI/CD y despliegue de
-        30+ apps en producción. Ingeniero en TI titulado.
+        3+ años desarrollando aplicaciones móviles con React Native y aplicaciones web con React.
+        Operación de una plataforma de 40+ apps publicadas en Google Play y App Store, con
+        despliegue automatizado por CI/CD. Experiencia en Firebase y Redux. Ingeniero en TI titulado.
       </p>
       <div class="skills">
         <span class="skill">React Native</span>
@@ -37,6 +38,7 @@
         <span class="skill">JavaScript</span>
         <span class="skill">HTML</span>
         <span class="skill">CSS</span>
+        <span class="skill">Tailwind CSS</span>
         <span class="skill">React Router</span>
         <span class="skill">Firebase</span>
         <span class="skill">Redux</span>
@@ -46,6 +48,7 @@
         <span class="skill">Git</span>
         <span class="skill">i18next</span>
         <span class="skill">Jest</span>
+        <span class="skill">Vitest</span>
         <span class="skill">Sentry</span>
         <span class="skill">Node.js</span>
         <span class="skill">Expo</span>
@@ -69,18 +72,18 @@
         <div class="exp-header">
           <div>
             <h3>React Native Developer</h3>
-            <span class="exp-company">Beehive — Proyecto campus_móvil</span>
+            <span class="exp-company">Campus Móvil (Beehive Software)</span>
           </div>
-          <span class="exp-date">2023 — 2026</span>
+          <span class="exp-date">2023 — Presente</span>
         </div>
         <ul class="exp-list">
-          <li>Arquitectura white-label con 30+ variantes de app publicadas en App Store y Google Play</li>
-          <li>Automatización de CI/CD con Fastlane + Bitbucket + Xcode Cloud, reduciendo deploys de días a horas</li>
-          <li>Implementación de Firebase Auth, Firestore, Cloud Messaging, Analytics, Storage y Crashlytics</li>
-          <li>Notificaciones push, lector QR, chat en tiempo real, autenticación biométrica y firma digital</li>
-          <li>Gestión de estado con Redux + Thunk, navegación con React Navigation</li>
+          <li>Diseñé e implementé el pipeline de CI/CD (Fastlane, Bitbucket Pipelines y Xcode Cloud) de una plataforma white-label con 40+ apps publicadas en App Store y Google Play: de varios días de trabajo manual a horas</li>
+          <li>Único desarrollador móvil de la plataforma: nuevas funcionalidades, corrección de bugs en producción, gestión de las apps en las tiendas y proyectos Firebase por institución</li>
+          <li>Uso de Firebase Auth, Firestore, Cloud Messaging, Analytics, Storage y Crashlytics</li>
+          <li>Desarrollo y mantenimiento de una app con notificaciones push, lector QR, chat en tiempo real, autenticación biométrica y firma digital</li>
+          <li>Gestión de estado con Redux, navegación con React Navigation y compatibilidad con texto escalable</li>
           <li>Soporte multi-idioma con react-native-localization (EN/ES)</li>
-          <li>Monitoreo de errores en producción con Sentry</li>
+          <li>Monitoreo de errores en producción con Sentry y Crashlytics</li>
         </ul>
       </div>
     </section>
@@ -105,10 +108,31 @@
             <span>Firebase</span>
             <span>React Router</span>
             <span>i18next</span>
+            <span>Vitest</span>
           </div>
           <div class="project-links">
             <a href="https://taskflow-lake-five.vercel.app" target="_blank">Demo</a>
             <a href="https://github.com/sosagonzales0409-max/taskflow" target="_blank">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3>App de punto de venta e inventario</h3>
+            <span class="project-badge">Mobile · En desarrollo</span>
+          </div>
+          <p class="project-desc">
+            App para tiendas locales: ventas de contado y a crédito con abonos, inventario
+            con alerta de stock bajo, productos a granel, compras a proveedores, reportes
+            con gráficas y corte de día.
+          </p>
+          <div class="project-stack">
+            <span>React Native</span>
+            <span>TypeScript</span>
+            <span>React Navigation</span>
+          </div>
+          <div class="project-links">
+            <span class="no-link">En desarrollo</span>
           </div>
         </article>
 
@@ -136,12 +160,13 @@
             <span class="project-badge">Mobile</span>
           </div>
           <p class="project-desc">
-            App de recordatorios con notificaciones push y locales programadas
-            mediante FCM y Notifee. Sincronización en tiempo real con Firestore.
-            Soporte multi-idioma y persistencia offline.
+            App de recordatorios con notificaciones locales programadas (Notifee) y
+            obtención de token FCM. Sincronización en tiempo real con Firestore,
+            soporte multi-idioma y persistencia offline.
           </p>
           <div class="project-stack">
             <span>React Native</span>
+            <span>TypeScript</span>
             <span>Firebase</span>
             <span>FCM</span>
             <span>Notifee</span>
@@ -155,64 +180,25 @@
 
         <article class="project-card">
           <div class="project-header">
-            <h3>ExpoFirebaseKit</h3>
-            <span class="project-badge">Boilerplate</span>
+            <h3>DevTree</h3>
+            <span class="project-badge">Web · En curso</span>
           </div>
           <p class="project-desc">
-            Boilerplate production-ready con Expo SDK 54, Firebase, Redux Toolkit,
-            autenticación, modo oscuro, notificaciones push y multi-idioma.
+            Proyecto full stack de un curso: API con autenticación JWT y MongoDB,
+            y cliente en React con validación y manejo de datos.
           </p>
           <div class="project-stack">
-            <span>Expo</span>
-            <span>Firebase</span>
-            <span>Redux Toolkit</span>
+            <span>React</span>
             <span>TypeScript</span>
-            <span>React Hook Form</span>
-            <span>Google Sign-In</span>
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>MongoDB</span>
+            <span>Tailwind CSS</span>
           </div>
           <div class="project-links">
-            <span class="no-link">Código propietario</span>
+            <span class="no-link">En curso</span>
           </div>
         </article>
-
-        <article class="project-card">
-          <div class="project-header">
-            <h3>LudyGames</h3>
-            <span class="project-badge">Juego</span>
-          </div>
-          <p class="project-desc">
-            Juego estilo Flappy Bird con animaciones fluidas usando React Native
-            para renderizado a 60 FPS.
-          </p>
-          <div class="project-stack">
-            <span>React Native</span>
-            <span>TypeScript</span>
-          </div>
-          <div class="project-links">
-            <span class="no-link">Código propietario</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-header">
-            <h3>LudyScan</h3>
-            <span class="project-badge">Mobile</span>
-          </div>
-          <p class="project-desc">
-            App para conectar con impresoras Canon y realizar tareas de impresión
-            desde dispositivos Android. Desarrollada con React Native CLI.
-          </p>
-          <div class="project-stack">
-            <span>React Native</span>
-            <span>React Navigation</span>
-            <span>TypeScript</span>
-          </div>
-          <div class="project-links">
-            <span class="no-link">Código propietario</span>
-          </div>
-        </article>
-
-
       </div>
     </section>
 
