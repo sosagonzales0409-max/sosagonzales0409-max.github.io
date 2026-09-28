@@ -19,6 +19,10 @@
         <li><a href="#formacion">Formación</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
+      <button class="theme-toggle" type="button" aria-label="Activar modo oscuro" title="Activar modo oscuro">
+        <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg>
+      </button>
     </div>
   </nav>
 
@@ -128,7 +132,7 @@
           </p>
           <div class="project-stack">
             <span>React Native</span>
-            <span>TypeScript</span>
+            <span>SQLite</span>
             <span>React Navigation</span>
           </div>
           <div class="project-links">
@@ -181,7 +185,7 @@
         <article class="project-card">
           <div class="project-header">
             <h3>DevTree</h3>
-            <span class="project-badge">Web · En curso</span>
+            <span class="project-badge">Web · Proyecto de curso</span>
           </div>
           <p class="project-desc">
             Proyecto full stack de un curso: API con autenticación JWT y MongoDB,
@@ -196,7 +200,7 @@
             <span>Tailwind CSS</span>
           </div>
           <div class="project-links">
-            <span class="no-link">En curso</span>
+            <span class="no-link">Proyecto de curso</span>
           </div>
         </article>
       </div>
@@ -248,5 +252,25 @@
   <footer>
     <p>&copy; 2026 Luis Alberto Sosa González — Frontend Developer | React Native & React</p>
   </footer>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const button = document.querySelector('.theme-toggle');
+      const saved = localStorage.getItem('portfolio-theme');
+      if (saved === 'dark') root.dataset.theme = 'dark';
+      button.addEventListener('click', () => {
+        const dark = root.dataset.theme !== 'dark';
+        root.dataset.theme = dark ? 'dark' : 'light';
+        localStorage.setItem('portfolio-theme', dark ? 'dark' : 'light');
+        const label = dark ? 'Activar modo claro' : 'Activar modo oscuro';
+        button.setAttribute('aria-label', label);
+        button.title = label;
+      });
+      if (saved === 'dark') {
+        button.setAttribute('aria-label', 'Activar modo claro');
+        button.title = 'Activar modo claro';
+      }
+    })();
+  </script>
 </body>
 </html>
