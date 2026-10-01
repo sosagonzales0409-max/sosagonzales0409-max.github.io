@@ -65,6 +65,11 @@ section h2 { margin: 0; text-align: left; font-size: clamp(2rem,3.8vw,2.8rem); f
 .exp-header h3,.project-header h3 { margin: 0; color: var(--ink); font-size: 1.06rem; font-weight: 650; line-height: 1.45; letter-spacing: -.02em; }
 .exp-company { display: block; margin-top: 4px; color: var(--green); font-size: .84rem; font-weight: 600; }
 .exp-date { padding-top: 3px; color: var(--muted); font-size: .72rem; white-space: nowrap; }
+.exp-roles { display: flex; flex-wrap: wrap; gap: 6px 10px; margin: 0; padding: 0; list-style: none; }
+.exp-roles li { color: var(--muted); font-size: .72rem; }
+.exp-roles li:first-child { color: var(--green); }
+.exp-roles li:not(:last-child)::after { content: "←"; padding-left: 10px; color: var(--line); }
+.exp-roles strong { font-weight: 600; }
 .exp-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; margin: 18px 0 0; padding: 0; list-style: none; }
 .exp-list li { position: relative; margin: 0; padding: 10px 0 10px 16px; border-top: 1px solid var(--line); color: var(--body); font-size: .83rem; line-height: 1.65; }
 .exp-list li::before { content: ""; position: absolute; top: 18px; left: 0; width: 4px; height: 4px; border-radius: 50%; background: var(--green); }
